@@ -1,0 +1,163 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Eshop Activation Email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+            color: #222222;
+        }
+
+        a {
+            color: #0070f3;
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 6px;
+            color: #0070f3;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .email-wrapper {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .email-header {
+            background-color: #0070f3;
+            padding: 30px 24px;
+            color: #ffffff;
+        }
+
+        .email-body {
+            padding: 32px 24px;
+        }
+
+        .email-footer {
+            background-color: #f8f8f8;
+            padding: 24px;
+            font-size: 14px;
+            color: #666666;
+            text-align: center;
+        }
+
+        .otp-box {
+            background-color: #f5f9ff;
+            border: 2px dashed #0070f3;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 24px 0;
+        }
+
+        .security-note {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #0070f3;
+            color: #ffffff !important;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Email Preview Text -->
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+        Your Eshop activation code is <%= otp %>
+    </div>
+
+    <div class="email-wrapper">
+
+        <div class="email-header">
+            <h1>Welcome to Eshop</h1>
+        </div>
+
+        <div class="email-body">
+
+            <p>Hello <strong><%= name %></strong>,</p>
+
+            <p>
+                Thank you for registering with Eshop.
+                To activate your account, please use the verification code below:
+            </p>
+
+            <div class="otp-box">
+                <h2><%= otp %></h2>
+            </div>
+
+            <p>
+                Please enter this code on the activation page within the next
+                <strong>5 minutes</strong>.
+            </p>
+
+            <p class="security-note">
+                For security reasons, never share this code with anyone.
+                Our team will never ask for your verification code.
+            </p>
+
+            <p>
+                If you did not create an Eshop account, you can safely ignore
+                this email.
+            </p>
+
+        </div>
+
+        <div class="email-footer">
+
+            <p>
+                Need help?
+                Contact us at
+                <a href="mailto:support@eshop.com">
+                    support@eshop.com
+                </a>
+            </p>
+
+            <p>
+                © 2026 Eshop. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

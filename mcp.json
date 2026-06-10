@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "MongoDB": {
+      "command": "npx",
+      "args": ["-y", "mongodb-mcp-server@latest", "--readOnly"],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://crireino2016_db_user:dejEP92fkcWyZYvy@cluster0.5wl73w2.mongodb.net/development?retryWrites=true&w=majority&appName=Cluster0"
+      }
+    }
+  }
+}

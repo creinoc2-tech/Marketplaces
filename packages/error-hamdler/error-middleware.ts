@@ -1,0 +1,18 @@
+import { Request, Response} from 'express';
+import { AppError } from "./index"
+export const errorMiddleware = (err: Error, req: Request, res: Response) => {
+ if (err instanceof AppError) {
+   console.error(`Error : ${req.method} ${req.url} - ${err.message}`);
+   res.status(err.statusCode).json({
+     status: 'error',
+     message: err.message,
+     ...(err.details && { details: err.details })
+   });
+ }
+
+ console.error(`Unexpected Error : ${req.method} ${req.url} - ${err.message}` , err);
+   res.status(500).json({
+     status: 'error',
+     message: 'Something went wrong, please try again later.'
+   });
+};
